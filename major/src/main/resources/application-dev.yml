@@ -1,0 +1,21 @@
+spring:
+  application:
+    name:  changel-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: gateway
+            uri: ws://localhost:9000
+            predicates:
+              - Path=/frontend/api/gateway/**
+
+
+swagger:
+  base-package: com.changel.gageway
+  title: gageway-doc
+  version: 1.0
+  description: 网关接口
+  contact-name: changel
+  contact-email: unsupport
+  contact-url: https://github.com/changel/spring-cloud-changel
+  group-name: spring-cloud-changel-gateway
