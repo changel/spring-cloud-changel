@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 80
 spring:
   application:
     name:  changel-gateway
@@ -9,4 +9,8 @@ spring:
         - id: changel-major
           uri: "http://localhost:9000/"
           predicates:
-            - Path=/frontend/api/gateway/**
+            - Path=/frontend/api/major/**
+        - id: changel-nacos
+          uri: "http://localhost:9010/"
+          predicates:
+            - Path=/frontend/api/nacos/**

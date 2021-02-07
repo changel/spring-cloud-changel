@@ -1,15 +1,15 @@
 server:
-  port: 9000
+  port: 9010
 spring:
   application:
-    name:  changel-major
+    name:  changel-nacos
 
 swagger:
-  base-package: com.changel.major
-  title: major-doc
+  base-package: com.changel.nacos
+  title: nacos-doc
   version: 1.0
   description: 网关接口
   contact-name: changel
   contact-email: unsupport
   contact-url: https://github.com/changel/spring-cloud-changel
-  group-name: spring-cloud-changel-major
+  group-name: spring-cloud-changel-nacos
