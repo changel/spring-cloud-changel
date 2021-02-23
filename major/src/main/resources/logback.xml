@@ -70,7 +70,7 @@
     表示当前logger的appender-ref和rootLogger的appender-ref都有效
     -->
     <!-- app logger -->
-    <logger name="com.sinitek" level="info"/>
+    <logger name="com.changel.major" level="info"/>
     <!-- Spring framework logger -->
     <logger name="org.springframework" level="debug" additivity="false"></logger>
 

@@ -5,12 +5,21 @@ spring:
     name:  changel-gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
         - id: changel-major
-          uri: "http://localhost:9000/"
+#          uri: "http://localhost:9000/"
+          uri: lb://changel-major
           predicates:
-            - Path=/frontend/api/major/**
+            - Path=/api/major/**
         - id: changel-nacos
-          uri: "http://localhost:9010/"
+          uri: lb://changel-nacos
           predicates:
-            - Path=/frontend/api/nacos/**
+            - Path=/api/nacos/**
+        - id: changel-blog
+          uri: lb://changel-blog
+          predicates:
+            - Path=/api/blog/**

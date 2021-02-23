@@ -8,7 +8,7 @@
     <!-- 定义日志的根目录 -->
     <property name="LOG_HOME" value="logs"/>
     <!-- 定义日志文件名称 -->
-    <property name="appName" value="changel-gateway"></property>
+    <property name="appName" value="changel-blog"></property>
     <!-- ch.qos.logback.core.ConsoleAppender 表示控制台输出 -->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <!--
@@ -70,7 +70,7 @@
     表示当前logger的appender-ref和rootLogger的appender-ref都有效
     -->
     <!-- app logger -->
-    <logger name="com.changel.gateway" level="info"/>
+    <logger name="com.changel.blog" level="info"/>
     <!-- Spring framework logger -->
     <logger name="org.springframework" level="debug" additivity="false"></logger>
 

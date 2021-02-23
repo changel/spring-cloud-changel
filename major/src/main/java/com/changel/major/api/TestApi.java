@@ -18,7 +18,7 @@ import java.util.UUID;
  */
 @Api(tags="测试主应用接口")
 @RestController
-@RequestMapping(value = "/frontend/api/major")
+@RequestMapping(value = "/api/major")
 @Slf4j
 public class TestApi {
 
@@ -26,8 +26,8 @@ public class TestApi {
             value = "测试获取姓名年龄",
             notes = "随机返回姓名和年龄"
     )
-    @GetMapping("/test/call-name-test")
-    public R<TestVo> createTask() {
+    @GetMapping("/test")
+    public R<TestVo> test() {
         log.info("访问主应用的测试接口...");
         R<TestVo> result = new R<>();
         TestVo vo = new TestVo();

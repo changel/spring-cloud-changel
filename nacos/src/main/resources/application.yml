@@ -8,7 +8,7 @@ swagger:
   base-package: com.changel.nacos
   title: nacos-doc
   version: 1.0
-  description: 网关接口
+  description: 注册中心接口
   contact-name: changel
   contact-email: unsupport
   contact-url: https://github.com/changel/spring-cloud-changel

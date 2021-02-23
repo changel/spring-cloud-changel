@@ -1,14 +1,15 @@
+server:
+  port: 9020
 spring:
   application:
-    name:  changel-nacos
-
+    name:  changel-blog
 
 swagger:
-  base-package: com.changel.nacos
-  title: nacos-doc
+  base-package: com.changel.blog
+  title: blog-doc
   version: 1.0
-  description: 注册中心接口
+  description: 博客
   contact-name: changel
   contact-email: unsupport
   contact-url: https://github.com/changel/spring-cloud-changel
-  group-name: spring-cloud-changel-nacos
+  group-name: spring-cloud-changel-blog
