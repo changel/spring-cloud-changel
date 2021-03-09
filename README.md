@@ -16,7 +16,10 @@
     create database nacos_config;
     use nacos_config;
     GRANT ALL PRIVILEGES  ON nacos_config.* TO 'nacos_config'@'%';
+    grant all privileges on nacos_config.* to 'nacos_config'@'%' identified by 'nacos_config' with grant option;
     GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON nacos_config.* TO nacos_config@'%' identified by 'nacos_config';
+    FLUSH   PRIVILEGES; 
+    grant all privileges on nacos_config.* to 'nacos_config'@'chang-188' identified by 'nacos_config' with grant option;
     FLUSH   PRIVILEGES; 
  ```
 

@@ -10,7 +10,7 @@ import lombok.Data;
  * @Version 1.0
  */
 @Data
-public class TestVo {
+public class TestVO {
 
     @ApiModelProperty(
             value = "年龄",

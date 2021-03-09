@@ -3,7 +3,13 @@ server:
 spring:
   application:
     name:  changel-blog
-
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  hystrix:
+    enabled: true
 swagger:
   base-package: com.changel.blog
   title: blog-doc

@@ -2,14 +2,13 @@ package com.changel.major.api;
 
 
 import com.changel.major.support.R;
-import com.changel.major.vo.TestVo;
+import com.changel.major.vo.TestVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Random;
-import java.util.UUID;
 
 /**
  * @Author Chang.Tong
@@ -27,10 +26,10 @@ public class TestApi {
             notes = "随机返回姓名和年龄"
     )
     @GetMapping("/test")
-    public R<TestVo> test() {
+    public R<TestVO> test() {
         log.info("访问主应用的测试接口...");
-        R<TestVo> result = new R<>();
-        TestVo vo = new TestVo();
+        R<TestVO> result = new R<>();
+        TestVO vo = new TestVO();
         Random random =
                 new Random();
         vo.setAge(random.nextInt(50));
