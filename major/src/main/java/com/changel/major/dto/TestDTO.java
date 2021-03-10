@@ -1,4 +1,4 @@
-package com.changel.blog.dto;
+package com.changel.major.dto;
 
 
 import io.swagger.annotations.ApiModelProperty;
@@ -10,7 +10,7 @@ import lombok.Data;
  * @Version 1.0
  */
 @Data
-public class TestDto {
+public class TestDTO {
 
     @ApiModelProperty(
             value = "年龄",

@@ -3,6 +3,19 @@ server:
 spring:
   application:
     name:  changel-blog
+  kafka:
+    bootstrap-servers: 172.16.5.188:9092  # Kafka集群 用逗号分隔
+    producer:
+      retries: 0          # 重试次数
+      acks: 1             # 应答级别:多少个分区副本备份完成时向生产者发送ack确认(可选0、1、all/-1)
+      batch-size: 10000   # 批量大小
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: com.changel.blog.common.kafka.serialization.JsonSerializer #自定义序列号实现
+    consumer:
+      enable-auto-commit: true
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: com.changel.blog.common.kafka.serialization.JsonDeserializer
+      group-id: test-group-2  #必须要这个，要不项目启动不起来。原来暂时不知道
 feign:
   httpclient:
     enabled: false
@@ -10,6 +23,17 @@ feign:
     enabled: true
   hystrix:
     enabled: true
+
+
+
+
+
+
+
+
+
+
+
 swagger:
   base-package: com.changel.blog
   title: blog-doc
@@ -19,3 +43,4 @@ swagger:
   contact-email: unsupport
   contact-url: https://github.com/changel/spring-cloud-changel
   group-name: spring-cloud-changel-blog
+

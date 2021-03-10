@@ -1,8 +1,9 @@
-package com.changel.major.dto;
+package com.changel.blog.dto;
 
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import java.io.Serializable;
 
 /**
  * @Author Chang.Tong
@@ -10,8 +11,7 @@ import lombok.Data;
  * @Version 1.0
  */
 @Data
-public class TestDto {
-
+public class TestDTO implements Serializable {
     @ApiModelProperty(
             value = "年龄",
             example = "1"
