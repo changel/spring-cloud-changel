@@ -32,6 +32,7 @@ public class TestApi {
     public R<TestVO> test() {
         log.info("访问主应用的测试接口...");
         R<TestVO> result = new R<>();
+
         TestVO vo = new TestVO();
         Random random =
                 new Random();

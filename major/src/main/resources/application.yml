@@ -14,11 +14,17 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: com.changel.major.common.kafka.serialization.JsonDeserializer
       group-id: test-group  #必须要这个，要不项目启动不起来。原来暂时不知道
+  mvc:
+    throw-exception-if-no-handler-found: true   #出现404错误时，直接抛出异常
+  resources:
+    add-mappings: false  #不要为我们项目中的资源文件建立映射。 不加这个404还是不会被我们的全局异常处理捕获到
+
+
 swagger:
   base-package: com.changel.major
   title: major-doc
   version: 1.0
-  description: 网关接口
+  description: major接口
   contact-name: changel
   contact-email: unsupport
   contact-url: https://github.com/changel/spring-cloud-changel

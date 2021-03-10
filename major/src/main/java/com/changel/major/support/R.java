@@ -3,6 +3,7 @@ package com.changel.major.support;
 
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.context.MessageSource;
+import org.springframework.context.support.MessageSourceSupport;
 
 import java.util.Locale;
 

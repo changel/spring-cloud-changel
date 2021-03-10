@@ -1,0 +1,11 @@
+启动kafka和zookeeper服务
+cd /usr/kafka/kafka_2.12-2.1.0/
+bin/zookeeper-server-start.sh  -daemon config/zookeeper.properties
+netstat -anlpt | grep 2181
+bin/kafka-server-start.sh -daemon config/server.properties
+netstat -tunlp|egrep "(2181|9092)"
+
+单机启动nacos
+cd /usr/nacos/nacos/bin/
+sh startup.sh -m standalone
+tail -f /usr/nacos/nacos/logs/start.out
